@@ -31,6 +31,7 @@ def index(request):
     context_dict['extra'] = 'From the model solution on GitHub'
     # Render the response and send it back!
     visitor_cookie_handler(request)
+    context_dict['visits'] = request.session['visits']
 
     return render(request, 'rango/index.html', context=context_dict)
 
