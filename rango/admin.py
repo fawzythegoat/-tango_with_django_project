@@ -8,9 +8,6 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
-# Update the registration to include this customised interface
-admin.site.register(Category, CategoryAdmin)
-
 class PageAdmin(admin.ModelAdmin):
     list_display = ('title', 'category', 'url')
 
